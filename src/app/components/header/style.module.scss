@@ -10,39 +10,40 @@
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  z-index: 2;
+}
 
-  .burger {
-    width: 100%;
-    &::after,
-    &::before {
-      content: '';
-      display: block;
-      height: 1px;
-      width: 40%;
-      background-color: white;
-      margin: auto;
-      position: relative;
-      transition: transform 0.3s;
-    }
-
-    &::after {
-      top: -5px;
-    }
-
-    &::before {
-      top: 5px;
-    }
+.burger {
+  width: 100%;
+  &::after,
+  &::before {
+    content: '';
+    display: block;
+    height: 1px;
+    width: 40%;
+    background-color: white;
+    margin: auto;
+    position: relative;
+    transition: transform 0.3s;
   }
 
-  .burgerActive {
-    &::after {
-      top: -1px;
-      transform: rotate(45deg);
-    }
+  &::after {
+    top: -5px;
+  }
 
-    &::before {
-      top: 0px;
-      transform: rotate(-45deg);
-    }
+  &::before {
+    top: 5px;
+  }
+}
+
+.burgerActive {
+  &::after {
+    top: -1px;
+    transform: rotate(45deg);
+  }
+
+  &::before {
+    top: 0px;
+    transform: rotate(-45deg);
   }
 }
