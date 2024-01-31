@@ -1,7 +1,10 @@
 import React from 'react';
-import styles from './style.module.scss';
-import Link from './Link/index';
 import { motion } from 'framer-motion';
+import styles from './style.module.scss';
+
+import Link from './Link/index';
+import Curve from './Curve/index';
+
 import { menuSlide } from '../anim';
 
 const index = () => {
@@ -34,6 +37,7 @@ const index = () => {
           <a href=''>Github</a>
           <a href=''>Twitter</a>
         </div>
+        <Curve />
       </div>
     </motion.div>
   );
