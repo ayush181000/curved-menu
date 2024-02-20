@@ -1,14 +1,22 @@
+/* eslint-disable react-hooks/exhaustive-deps */
+'use client';
+import { useEffect } from 'react';
 import styles from './style.module.scss';
 import { motion } from 'framer-motion';
 
-const index = () => {
-  const initialPath = `M100 0 L200 0 L200 ${window.innerHeight} L100 ${
-    window.innerHeight
-  } Q-100 ${window.innerHeight / 2} 100 0`;
+const Curve = () => {
+  let initialPath = '';
+  let targetPath = '';
 
-  const targetPath = `M100 0 L200 0 L200 ${window.innerHeight} L100 ${
-    window.innerHeight
-  } Q100 ${window.innerHeight / 2} 100 0`;
+  useEffect(() => {
+    initialPath = `M100 0 L200 0 L200 ${window.innerHeight} L100 ${
+      window.innerHeight
+    } Q-100 ${window.innerHeight / 2} 100 0`;
+
+    targetPath = `M100 0 L200 0 L200 ${window.innerHeight} L100 ${
+      window.innerHeight
+    } Q100 ${window.innerHeight / 2} 100 0`;
+  }, []);
 
   const curve = {
     initial: {
@@ -36,4 +44,4 @@ const index = () => {
   );
 };
 
-export default index;
+export default Curve;
