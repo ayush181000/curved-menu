@@ -6,7 +6,7 @@ import Nav from './nav/index';
 import { AnimatePresence } from 'framer-motion';
 
 const index = () => {
-  const [isActive, setIsActive] = useState(true);
+  const [isActive, setIsActive] = useState(false);
 
   return (
     <>

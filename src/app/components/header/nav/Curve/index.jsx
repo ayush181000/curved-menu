@@ -4,19 +4,13 @@ import { useEffect } from 'react';
 import styles from './style.module.scss';
 import { motion } from 'framer-motion';
 
-const Curve = () => {
-  let initialPath = '';
-  let targetPath = '';
-
-  useEffect(() => {
-    initialPath = `M100 0 L200 0 L200 ${window.innerHeight} L100 ${
-      window.innerHeight
-    } Q-100 ${window.innerHeight / 2} 100 0`;
-
-    targetPath = `M100 0 L200 0 L200 ${window.innerHeight} L100 ${
-      window.innerHeight
-    } Q100 ${window.innerHeight / 2} 100 0`;
-  }, []);
+export default function Curve() {
+  let initialPath = `M100 0 L200 0 L200 ${window.innerHeight} L100 ${
+    window.innerHeight
+  } Q-100 ${window.innerHeight / 2} 100 0`;
+  let targetPath = `M100 0 L200 0 L200 ${window.innerHeight} L100 ${
+    window.innerHeight
+  } Q100 ${window.innerHeight / 2} 100 0`;
 
   const curve = {
     initial: {
@@ -42,6 +36,4 @@ const Curve = () => {
       ></motion.path>
     </svg>
   );
-};
-
-export default Curve;
+}
